@@ -1,0 +1,18 @@
+# Core PyTorch (Usually pre-installed in Colab, but needed for VSCode setup)
+torch>=2.0.0
+
+# Hugging Face Ecosystem
+transformers>=4.38.0      # For loading Qwen2-0.5B
+datasets>=2.16.0          # For loading UltraFeedback
+accelerate>=0.27.0        # Required for efficient training and device placement
+
+# Alignment & Training (Crucial for DPO)
+trl>=0.7.11               # Transformer Reinforcement Learning (contains DPOTrainer and SFTTrainer)
+
+# Stretch Goal: Memory Optimization
+peft>=0.8.2               # Parameter-Efficient Fine-Tuning (LoRA)
+bitsandbytes>=0.42.0      # For 4-bit/8-bit quantization to save VRAM
+
+# Evaluation & Visualization
+matplotlib>=3.7.0         # For plotting your training/loss curves
+wandb>=0.16.0             # (Optional) Weights & Biases for tracking loss curves automatically
