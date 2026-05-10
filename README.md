@@ -1,4 +1,4 @@
-<font size="5"> Final Project DPO </font> 
+<font size="10"> Final Project DPO </font> 
 
 Finetuning pretrained model using supervised finetuning and direct policy optimization
 
