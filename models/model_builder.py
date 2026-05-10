@@ -55,3 +55,19 @@ def load_dpo_model_and_tokenizer(sft_model_path="merged_sft_model") -> tuple[Pef
     dpo_peft_model = get_peft_model(sft_model, lora_config)
 
     return dpo_peft_model, tokenizer
+
+
+def load_full_model(sft_model_path="merged_sft_model", dpo_adapters_path="dpo_adapter") :
+    base_model = AutoModelForCausalLM.from_pretrained(
+        sft_model_path, 
+        device_map="auto"
+    )
+
+    final_model = PeftModel.from_pretrained(
+        base_model, 
+        dpo_adapters_path
+    )
+    # Optionally merge into single unit
+    # final_standalone_model = final_model.merge_and_unload()
+    return final_model
+    

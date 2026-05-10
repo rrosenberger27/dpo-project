@@ -31,4 +31,4 @@ final-project/
 **Note:**
 
 - Two saved folders for the SFT adapters and DPO adapters.
-- Commands in the notebook for merging the SFT adapters with the base model (for then using DPO adapters with), but merged model stored in drive for now.
+- Commands in the notebook for merging the SFT adapters with the base model, method for loading final model given this merged model and dpo adapters saved. Merged model currently stored in drive for now :
